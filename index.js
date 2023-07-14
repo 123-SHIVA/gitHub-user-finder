@@ -13,8 +13,6 @@ form.addEventListener('submit',function(e){
     fetch('https://api.github.com/users/'+ originalName).then((result)=>result.json()).then((data)=>{
         console.log(data)
 
-        // ek kaam kru kya bs do min lagega please
-
         document.getElementById('img').innerHTML=`<img src=${data.avatar_url}/>`
         
         document.getElementById("name").innerHTML=`Name:${data.login}`
